@@ -101,6 +101,28 @@ def create_save_load_large_array_of_floats():
     print(floats2[-1])
     print(floats2 == floats)
 
+def deque_playground():
+    """  """
+    from collections import deque
+
+    dq = deque(range(10), maxlen=10)
+    print(dq)
+
+    dq.rotate(3)
+    print(dq)
+
+    dq.rotate(-4)
+    print(dq)
+
+    dq.appendleft(-1)
+    print(dq)
+
+    dq.extend([11, 22, 33])
+    print(dq)
+
+    dq.extendleft([10, 20, 30, 40])
+    print(dq)
+
 def main():
     """ General main run function. """
     symbols = "$¢£¥€¤"
@@ -144,7 +166,12 @@ def main():
     """
 
     # Test large array manipulation
+    """
     create_save_load_large_array_of_floats()
+    """
 
+    # Test deque manipulations
+    deque_playground()
+    
 if __name__ == "__main__":
     main()
